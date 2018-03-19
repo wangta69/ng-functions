@@ -1,0 +1,41 @@
+{
+  "name": "ng-functions",
+  "version": "1.0.0",
+  "description": "collection of general functons",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@angular/common": "~5.0",
+    "@angular/compiler": "~5.0",
+    "@angular/core": "~5.0",
+    "rxjs": "^5.5.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.2",
+    "@angular/compiler-cli": "~5.0",
+    "@types/node": "~6.0.60",
+    "tslint": "~5.7.0",
+    "typescript": "~2.4.2"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangta69//ng-functions.git"
+  },
+  "keywords": [
+    "common functions"
+  ],
+  "author": "pondol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangta69/ng-functions/issues"
+  },
+  "homepage": "https://github.com/wangta69/ng-functions#readme",
+  "directories": {
+    "test": "test"
+  }
+}
