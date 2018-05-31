@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CommonService {
 	constructor() {
 	}
@@ -87,12 +89,14 @@ export class CommonService {
 	    }
 	};
 
-	hasOwnProperty(obj, propName) {
-	    return Object.prototype.hasOwnProperty.call(obj, propName);
+	hasOwnProp(obj, propName) {
+    //    return obj.hasOwnProperty(propName);
+	   return Object.prototype.hasOwnProperty.call(obj, propName);
 	};
 
 	getOwnProperty(obj, propName) {
-	    return Object.prototype.hasOwnProperty.call(obj, propName) ? obj[propName] : undefined;
+    //    return obj.hasOwnProperty(propName) ? obj[propName] : undefined;
+	   return Object.prototype.hasOwnProperty.call(obj, propName) ? obj[propName] : undefined;
 	};
 
 
