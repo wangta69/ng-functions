@@ -31,6 +31,10 @@ export class CommonService {
 		return	input;
 	};//init:function(){
 
+	isInt(nVal) {
+	    return typeof nVal === "number" && isFinite(nVal) && nVal > -9007199254740992 && nVal < 9007199254740992 && Math.floor(nVal) === nVal;
+	};
+
 	in_array(needle, haystack) {
 	    for(var i in haystack) {
 	        if(haystack[i] == needle) return true;
@@ -42,6 +46,11 @@ export class CommonService {
 		return arr.slice();
 	}
 
+
+//var str = "How are you doing today?";
+//var res = str.split(" ");
+//var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//var energy = fruits.join();
 	/**
 	* remove item from array by value
 	*/
@@ -55,6 +64,37 @@ export class CommonService {
 	    }
 	    return false;
 	};
+
+	arrayPushUnique(needle, haystack, size? ){
+        if(this.in_array(needle, haystack))
+            return haystack;
+
+        haystack.push(needle);
+
+        if(typeof size == "number" && haystack.length > size)
+            haystack.shift();
+
+        return haystack;
+    }
+
+	shuffle(a) {
+	    var j, x, i;
+	    for (i = a.length - 1; i > 0; i--) {
+	        j = Math.floor(Math.random() * (i + 1));
+	        x = a[i];
+	        a[i] = a[j];
+	        a[j] = x;
+	    }
+	};
+
+	hasOwnProperty(obj, propName) {
+	    return Object.prototype.hasOwnProperty.call(obj, propName);
+	};
+
+	getOwnProperty(obj, propName) {
+	    return Object.prototype.hasOwnProperty.call(obj, propName) ? obj[propName] : undefined;
+	};
+
 
 	add_comma(input){
 		return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
