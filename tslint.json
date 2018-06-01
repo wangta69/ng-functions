@@ -12,6 +12,9 @@
             "element",
             "enl",
             "kebab-case"
-        ]
+        ],
+        "indent": {
+          "options": ["spaces", 4]
+        }
     }
 }

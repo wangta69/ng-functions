@@ -1,5 +1,5 @@
 # ng-functions
-Tested for angular6
+A collection of commonly used functions for angular [Tested for angular6]
 
 ## Installation
 ```
