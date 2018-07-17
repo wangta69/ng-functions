@@ -1,11 +1,11 @@
 {
   "name": "ng-functions",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
   },
-  "description": "Tested for angular6",
+  "description": "A collection of commonly used functions for angular",
   "main": "karma.conf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
