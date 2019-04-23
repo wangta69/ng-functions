@@ -2,8 +2,8 @@
   "name": "ng-functions",
   "version": "6.0.5",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0"
   },
   "description": "A collection of commonly used functions for angular",
   "main": "karma.conf.js",
