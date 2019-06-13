@@ -15,7 +15,7 @@ export class CommonService {
     /**
     * create random string as given length
     */
-    randomString (len) {
+    randomString(len: number) {
         let text = '';
         const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -25,14 +25,14 @@ export class CommonService {
         return text;
     }
 
-    range (input, min: number, max: number): any {// @Pipe({name: 'range'}) 와 동일 (range.pipe.ts)
+    range(input: number[], min: number, max: number): any {// @Pipe({name: 'range'}) 와 동일 (range.pipe.ts)
         for (let i = min; i <= max; i++) {
             input.push(i);
         }
         return	input;
     }// init:function(){
 
-    isInt (nVal) {
+    isInt(nVal: number) {
         return typeof nVal === 'number'
                 && isFinite(nVal)
                 && nVal > -9007199254740992
@@ -40,14 +40,14 @@ export class CommonService {
                 && Math.floor(nVal) === nVal;
     }
 
-    in_array (needle, haystack) {
+    in_array(needle: string | number, haystack: any[]) {
         for (const i in haystack) {
             if (haystack[i] === needle) { return true; }
         }
         return false;
     }
 
-    copy_array (arr) {
+    copy_array(arr: any[]) {
         return arr.slice();
     }
 
@@ -59,18 +59,18 @@ export class CommonService {
     /**
     * remove item from array by value
     */
-    remove_item (value, haystack) {
+    remove_item(value, haystack) {
         return haystack.filter(v => v !== value);
     }
 
-    array_search (needle, haystack) {
+    array_search(needle, haystack) {
         for (const i in haystack) {
             if (haystack[i] === needle) { return i; }
         }
         return false;
     }
 
-    arrayPushUnique (needle, haystack, size? ) {
+    arrayPushUnique(needle, haystack, size? ) {
         if (this.in_array(needle, haystack)) {
             return haystack;
         }
@@ -103,11 +103,11 @@ export class CommonService {
    }
 
 
-    add_comma(input) {
+    add_comma(input: string) {
         return input.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     }
 
-    rm_comma(input) {
+    rm_comma(input: string) {
         return input.toString().replace(/,/g , '');
     }
 
